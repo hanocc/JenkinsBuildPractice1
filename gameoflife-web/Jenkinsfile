@@ -1,0 +1,8 @@
+node('UBUNTU'){
+    stage('GIT'){
+        git 'https://github.com/hanocc/JenkinsBuildPractice1.git'
+    }
+    stage('package'){
+        sh 'mvn package'
+    }
+}
